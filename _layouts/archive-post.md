@@ -12,7 +12,7 @@ title: Domestic issues involving spouses, children, or other family membersDomes
 	<div class="archive-list">
 		<img src="{{post.featured-image}}">
 		<div>
-			<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+			<h2><a href="{{site.baseurl}}/{{ post.url }}">{{ post.title }}</a></h2>
 			<p>{{post.excerpt}}</p>
 		</div>
 	</div>

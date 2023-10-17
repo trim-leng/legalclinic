@@ -8,7 +8,7 @@ google_analytics: UA-83909662-2
 og_banner: "/assets/images/banner.jpg"
 #logo: 
 #favicon: 
-baseurl: "https://trim-leng.github.io/legalclinic/"
+baseurl: "https://trim-leng.github.io/legalclinic"
 #google_analytics: ''
 auto-regeneration: --watch
 
