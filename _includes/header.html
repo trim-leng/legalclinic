@@ -1,56 +1,42 @@
-<header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
-  <div class="container">
-    <div class="header__inner">
-      <a class="header__logo" href="{{site.baseurl}}/index.html">
-        <div class="">
-          <b>{{site.title}}</b>
-        </div>
-      </a>
-      <nav class="header__links">
-       
-        <div class="container header__links-wrapper">
-        <!--
-         {% for item in site.data.menu %}
- 			<a class="header__link" href="{{site.baseurl}}/{{ item.url }}" alt="{{ item.title }}"><span itemprop="name">{{ item.name }}</span></a>
-        {% endfor %}
-        -->
-         <ul class="container main-menu" style="">
-         {% for menu in site.data.menu %}
-      {% if menu.subcategories != null %}
-       
-        <li>
-          <a class="header__link" href="{{ site.baseurl }}{{ menu.url }}"><span itemprop="name">{{ menu.name }}</span> ▼</a>
-          <ul>
-              {% for subcategory in menu.subcategories %}
-            <li>
-                <a  class="header__link" href="{{ site.baseurl }}{{ subcategory.subhref }}"><span>{{ subcategory.subname }}</span></a> <!--  {{ menu.url }}/{{ subcategory.subhref }} -->
-            </li>
-              {% endfor %}
-          </ul>
-        </li>
-      {% elsif menu.name == page.name %}
-         <li class="active">
-           <a class="header__link" href="{{ menu.url }}"><span itemprop="name">{{ menu.name }}</span></a>
-         </li>
-      {% else %} 
-        <li>
-          <a class="header__link" href="{{site.baseurl}}{{ menu.url }}"><span itemprop="name">{{ menu.name }}</span></a>
-        </li>
-      
-      {% endif %}
-    {% endfor %}
-          </ul>
-         <!--
-          <a class="header__link" href="{{ '/' | relative_url }}" itemprop="url"><span itemprop="name">{{ item.name }}</span></a>
-          <a class="header__link" href="{{ '/about' | relative_url }}" itemprop="url"><span itemprop="name">About</span></a>
-              -->
-     </div>
-      </nav>
-      <div class="header__toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
+
+<!DOCTYPE html>
+<html lang="bo">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="ཁྲིམས་གླེང་གི་བློ་འདྲི་བྱེད་ས། | {{page.title}}" />
+	<meta property="og:description" content="ཁྱེད་རང་ལ་བོད་སྐད་ཡིག་གི་སྟེང་ནས་ཁྲིམས་ལུགས་རོགས་རམ་བྱེད་དགོས་བྱུང་ཚེ། གལ་ཏེ་ཁྱེད་ཀྱི་གནད་དོན་དང་དྲི་བ་དེ་དག་གཤམ་གྱི་སྡེ་ཚན་གང་རུང་དུ་གཏོགས་ཚེ། སྡེ་ཚེན་དེའི་འབྲེལ་གྱི་དྲ་ཐག་ལ་བསྣུན་ན་ཁྱེད་ཀྱི་དྲི་བ་དང་བསྟུན་པའི་ལན་དང་དྲི་བ་ལ་འབྲེལ་བ་ཡོད་པའི་ཡིག་ཆ་སོགས་ཤར་ཡོང་། ཁྲིམས་གླེང་གིས་ཐད་གར་དྲི་བ་འདི་དག་ལ་ལན་མི་ལྡོན།" />
+	<meta property="og:image" content="{{site.baseurl}}{{site.og_banner}}" />
+	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/screen.css">
+	<title>{{page.title}}</title>
+	<link rel="manifest" href="/manifest.json">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#5f5eaa">
+	<meta name="msapplication-TileColor" content="#5f5eaa">
+	<meta name="msapplication-navbutton-color" content="#5f5eaa">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#5f5eaa">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-83909662-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{site.google_analytics}}');
+</script>
+
+</head>
+<body>
+<header>
+	<div id="title">
+		<div id="title-text">
+		<a href="{{site.baseurl}}/index.html"><h2>{{site.title}}</h2></a>
+	</div>
+	<ul>
+		<li><a href="{{site.baseurl}}/index.html">མདུན་ངོས།</a></li>
+	</ul>
+	</div>
 </header>
+<section>
+	
